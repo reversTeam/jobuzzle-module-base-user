@@ -1,0 +1,1 @@
+# Module BaseUser for Framework Front
