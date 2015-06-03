@@ -3,10 +3,12 @@
 class BaseUserDataMainEntity extends DataDataMainEntity {
 
 	_type = 'BaseUser';
+	_templateTimeline = 'baseuser_data_timeline_template';
 
 	#default get, set for _firstname;
 	#default get, set for _lastname;
 	#default get, set for _username;
+	#default get, set for _picture;
 	#default get, set for _lang;
 
 	initialize : function () {
@@ -29,6 +31,8 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 			this.setUsername(datas.username);
 		if (datas.lang)
 			this.setLang(datas.lang);
+		if (datas.picture)
+			this.setPicture(datas.picture);
 		return this;
 	}
 }

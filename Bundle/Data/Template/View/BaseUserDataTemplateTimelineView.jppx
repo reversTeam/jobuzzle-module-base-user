@@ -1,0 +1,20 @@
+#import (Config.path +'/Modules/Data/Bundle/Template/View/DataDataTemplateTimelineView') = DataDataTemplateTimelineView;
+
+class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
+
+	render : function () {
+		var entity = this.state.entity;
+		var picture = 'http://mobilephonetalk.com/customavatars/avatar211603_60.gif';
+
+		if (entity.getPicture() != undefined)
+			picture = entity.getPicture();
+		return (
+			<div>
+				{entity.getId() +' : '+ entity.getType() +' | Url -> '+ entity.getUrl() +' | Firstname : '+ entity.getFirstname() +' | Lastname : '+ entity.getLastname() +' | Username : '+ entity.getUsername() +' | Picture : ' } <img src={picture} />
+			</div>
+		);
+	}
+
+}
+
+#export BaseUserDataTemplateTimelineView;
