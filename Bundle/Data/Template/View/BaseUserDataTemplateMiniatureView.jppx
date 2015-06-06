@@ -1,10 +1,10 @@
-#import (Config.path +'/Modules/Data/Bundle/Template/View/DataDataTemplateTimelineView') = DataDataTemplateTimelineView;
+#import (Config.path +'/Modules/Data/Bundle/Template/View/DataDataTemplateMiniatureView') = DataDataTemplateMiniatureView;
 
-class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
+class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 
 	initialize : function () {
 		_super();
-		this._idElement = BaseUserDataTemplateTimelineView.elem_number++;
+		this._idElement = BaseUserDataTemplateMiniatureView.elem_number++;
 	}
 
 	initialState : function () {
@@ -23,7 +23,7 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		if (entity.getPicture() != undefined)
 			picture = entity.getPicture();
 		var style = { backgroundImage : "url('"+ picture +"')" };
-		var classeValue = 'student-display-timeline';
+		var classeValue = 'student-display-miniature';
 		classeValue += this.state.show ? ' show' : '';
 		if (!this.state.show) {
 			setTimeout(function () {
@@ -34,13 +34,10 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 
 		return (
 			<div className={classeValue} style={style}>
-				<div className="student-bottom-info">
-					<span className="username">{entity.getFirstname() +' '+ entity.getLastname()}</span>
-				</div>
 			</div>
 		);
 	}
 
 }
 
-#export BaseUserDataTemplateTimelineView;
+#export BaseUserDataTemplateMiniatureView;
