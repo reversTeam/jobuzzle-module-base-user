@@ -4,6 +4,7 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 
 	_type = 'BaseUser';
 	_templateTimeline = 'baseuser_data_timeline_template';
+	_templateMiniature = 'baseuser_data_miniature_template';
 
 	#default get, set for _firstname;
 	#default get, set for _lastname;
@@ -34,6 +35,10 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 		if (datas.picture)
 			this.setPicture(datas.picture);
 		return this;
+	}
+
+	isMe : function () {
+		return this.getId() == serviceLocator.get('ServiceManager').get('user_manager_main_service').getMeId();
 	}
 }
 

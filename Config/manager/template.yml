@@ -1,2 +1,3 @@
 invokables:
 	baseuser_data_timeline_template : Data/Template/BaseUserDataTimelineTemplate
+	baseuser_data_miniature_template : Data/Template/BaseUserDataMiniatureTemplate
