@@ -1,0 +1,7 @@
+class BaseUserDataCreateTemplate extends DataDataCreateTemplate {
+
+	_viewClassName = 'BaseUserDataTemplateCreateView';
+	_type = 'BaseUser';
+	_route = 'baseuser';
+
+}

@@ -10,8 +10,6 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 	initialState : function () {
 		var state = _super();
 
-		state.show = false;
-
 		return state;
 	}
 
@@ -23,17 +21,9 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 		if (entity.getPicture() != undefined)
 			picture = entity.getPicture();
 		var style = { backgroundImage : "url('"+ picture +"')" };
-		var classeValue = 'student-display-miniature';
-		classeValue += this.state.show ? ' show' : '';
-		if (!this.state.show) {
-			setTimeout(function () {
-				if (self.isMounted())
-					self.setState({ show : true });
-			}, 80);
-		}
 
 		return (
-			<div className={classeValue} style={style}>
+			<div className='student-display-miniature' style={style}>
 			</div>
 		);
 	}

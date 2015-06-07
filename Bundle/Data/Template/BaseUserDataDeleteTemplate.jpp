@@ -1,0 +1,7 @@
+class BaseUserDataDeleteTemplate extends DataDataDeleteTemplate {
+
+	_viewClassName = 'BaseUserDataTemplateDeleteView';
+	_type = 'BaseUser';
+	_route = 'baseuser';
+
+}

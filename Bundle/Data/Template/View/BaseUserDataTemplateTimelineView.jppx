@@ -1,5 +1,3 @@
-#import (Config.path +'/Modules/Data/Bundle/Template/View/DataDataTemplateTimelineView') = DataDataTemplateTimelineView;
-
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 
 	initialize : function () {
@@ -15,25 +13,27 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		return state;
 	}
 
+	getUrl : function () {
+		var router = serviceLocator.get('Router');
+		var entity = this.state.entity;
+
+		return router.build('/student/view',{
+			student_url : entity.getFirstname().toLowerCase() +'-'+  entity.getFirstname().charAt(0).toLowerCase()
+		});
+	}
+
 	render : function () {
 		var self = this;
+		var router = serviceLocator.get('Router');
 		var entity = this.state.entity;
 		var picture = 'http://mobilephonetalk.com/customavatars/avatar211603_60.gif';
 
 		if (entity.getPicture() != undefined)
 			picture = entity.getPicture();
 		var style = { backgroundImage : "url('"+ picture +"')" };
-		var classeValue = 'student-display-timeline';
-		classeValue += this.state.show ? ' show' : '';
-		if (!this.state.show) {
-			setTimeout(function () {
-				if (self.isMounted())
-					self.setState({ show : true });
-			}, 80);
-		}
 
 		return (
-			<div className={classeValue} style={style}>
+			<div className="student-display-timeline show" style={style} data-url={this.getUrl()} onClick={this.link}>
 				<div className="student-bottom-info">
 					<span className="username">{entity.getFirstname() +' '+ entity.getLastname()}</span>
 				</div>
@@ -42,5 +42,3 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 	}
 
 }
-
-#export BaseUserDataTemplateTimelineView;

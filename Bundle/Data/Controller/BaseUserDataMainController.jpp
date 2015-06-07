@@ -1,0 +1,5 @@
+class BaseUserDataMainController extends DataDataMainController {
+
+	_serviceName = 'baseuser_data_main_service';
+
+}

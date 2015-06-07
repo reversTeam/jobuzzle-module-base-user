@@ -1,3 +1,16 @@
 invokables:
 	baseuser_data_timeline_template : Data/Template/BaseUserDataTimelineTemplate
 	baseuser_data_miniature_template : Data/Template/BaseUserDataMiniatureTemplate
+
+	baseuser_data_search_template	: Data/Template/BaseUserDataSearchTemplate
+	baseuser_data_view_template		: Data/Template/BaseUserDataViewTemplate
+	baseuser_data_create_template	: Data/Template/BaseUserDataCreateTemplate
+	baseuser_data_update_template	: Data/Template/BaseUserDataUpdateTemplate
+	baseuser_data_delete_template	: Data/Template/BaseUserDataDeleteTemplate
+
+shared:
+	baseuser_data_search_template	: true
+	baseuser_data_view_template		: true
+	baseuser_data_create_template	: true
+	baseuser_data_update_template	: true
+	baseuser_data_delete_template	: true
