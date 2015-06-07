@@ -1,0 +1,7 @@
+class BaseUserDataUpdateTemplate extends DataDataUpdateTemplate {
+
+	_viewClassName = 'BaseUserDataTemplateUpdateView';
+	_type = 'BaseUser';
+	_route = 'baseuser';
+
+}
