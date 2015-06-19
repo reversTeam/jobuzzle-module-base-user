@@ -23,7 +23,7 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 		var style = { backgroundImage : "url('"+ picture +"')" };
 
 		return (
-			<div className='student-display-miniature' style={style}>
+			<div className='user-display-miniature' style={style}>
 			</div>
 		);
 	}
