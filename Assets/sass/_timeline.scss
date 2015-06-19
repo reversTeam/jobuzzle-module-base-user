@@ -1,4 +1,4 @@
-div.student-display-timeline {
+div.user-display-timeline {
 	display: inline-block;
 	width : 140px;
 	height: 166px;
@@ -11,7 +11,7 @@ div.student-display-timeline {
 	animation: fadeIn 1s linear both;
 	opacity: 0;
 
-	div.student-bottom-info {
+	div.user-bottom-info {
 		position: absolute;
 		width: 100%;
 		height: 30px;
@@ -27,7 +27,7 @@ div.student-display-timeline {
 		}
 	}
 
-	&:hover div.student-bottom-info {
+	&:hover div.user-bottom-info {
 		background-color: rgba($primary_color, 0.8);
 		color: rgba(white, 1);
 	}
