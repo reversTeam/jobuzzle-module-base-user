@@ -37,6 +37,12 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 		return this;
 	}
 
+	search : function (params) {
+		var reg = new RegExp(params, 'i');
+
+		return (_super(params) || reg.test(this.getFirstname()) || reg.test(this.getLastname()));
+	}
+
 	isMe : function () {
 		return this.getId() == serviceLocator.get('ServiceManager').get('user_manager_main_service').getMeId();
 	}
