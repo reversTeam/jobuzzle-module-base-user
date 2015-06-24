@@ -22,7 +22,7 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		});
 	}
 
-	render : function () {
+	display : function () {
 		var self = this;
 		var router = serviceLocator.get('Router');
 		var entity = this.state.entity;

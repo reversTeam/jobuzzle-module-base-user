@@ -13,7 +13,7 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 		return state;
 	}
 
-	render : function () {
+	display : function () {
 		var self = this;
 		var entity = this.state.entity;
 		var picture = 'http://mobilephonetalk.com/customavatars/avatar211603_60.gif';
