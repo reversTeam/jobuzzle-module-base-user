@@ -1,6 +1,13 @@
 class BaseUserDataMainService extends DataDataMainService {
 
 	_type = 'baseuser';
+	_entityType = 'BaseUser';
 	_title = 'BaseUsers';
+
+	getTitleParamsView : function (entity) {
+		if (entity)
+			return { url : entity.getFirstname() +' '+ entity.getLastname() };
+		return { url : '' };
+	}
 
 }

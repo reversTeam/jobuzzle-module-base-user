@@ -20,7 +20,7 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 
 		if (entity.getPicture() != undefined)
 			picture = entity.getPicture();
-		var style = { backgroundImage : "url('"+ picture +"')" };
+		var style = { backgroundImage : "url('http://"+ picture +"')" };
 
 		return (
 			<div className='user-display-miniature' style={style}>

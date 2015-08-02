@@ -18,7 +18,7 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		var entity = this.state.entity;
 
 		return router.build('/student/view',{
-			student_url : entity.getFirstname().toLowerCase() +'-'+  entity.getFirstname().charAt(0).toLowerCase() // entity.getUrl()
+			student_url : entity.getUrl()
 		});
 	}
 
@@ -30,7 +30,7 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 
 		if (entity.getPicture() != undefined)
 			picture = entity.getPicture();
-		var style = { backgroundImage : "url('"+ picture +"')" };
+		var style = { backgroundImage : "url('http://"+ picture +"')" };
 
 		return (
 			<div className="user-display-timeline show" style={style} data-url={this.getUrl()} onClick={this.link}>

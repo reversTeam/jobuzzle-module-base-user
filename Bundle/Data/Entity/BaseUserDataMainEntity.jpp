@@ -40,7 +40,13 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 	search : function (params) {
 		var reg = new RegExp(params, 'i');
 
-		return (_super(params) || reg.test(this.getFirstname()) || reg.test(this.getLastname()));
+		return (
+			_super(params)
+			|| reg.test(this.getFirstname())
+			|| reg.test(this.getLastname())
+			|| reg.test(this.getFirstname() +' '+ this.getLastname())
+			|| reg.test(this.getLastname() +' '+ this.getFirstname())
+		);
 	}
 
 	isMe : function () {
