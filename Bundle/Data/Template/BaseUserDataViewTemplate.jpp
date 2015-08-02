@@ -1,5 +1,6 @@
 class BaseUserDataViewTemplate extends DataDataViewTemplate {
 
+	_serviceName = 'baseuser_data_main_service';
 	_viewClassName = 'BaseUserDataTemplateViewView';
 	_type = 'BaseUser';
 	_route = 'baseuser';
