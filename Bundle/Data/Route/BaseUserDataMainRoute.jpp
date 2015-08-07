@@ -1,5 +1,3 @@
-#import (Config.path +'/Modules/Data/Bundle/Data/Route/DataDataMainRoute') = DataDataMainRoute;
-
 class BaseUserDataMainRoute extends DataDataMainRoute {
 
 	name = 'baseuser';
@@ -11,5 +9,3 @@ class BaseUserDataMainRoute extends DataDataMainRoute {
 	paramName = 'baseuser_url';
 
 }
-
-#export DataDataMainRoute;

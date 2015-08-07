@@ -1,5 +1,3 @@
-#import (Config.path +'/Modules/Data/Bundle/Data/Template/DataDataTimelineTemplate') = DataDataTimelineTemplate;
-
 class BaseUserDataMiniatureTemplate extends DataDataMiniatureTemplate {
 
 	_viewClassName = 'BaseUserDataTemplateMiniatureView';
@@ -11,5 +9,3 @@ class BaseUserDataMiniatureTemplate extends DataDataMiniatureTemplate {
 	}
 
 }
-
-#export BaseUserDataMiniatureTemplate;

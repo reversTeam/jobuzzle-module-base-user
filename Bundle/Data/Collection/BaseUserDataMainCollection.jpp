@@ -1,5 +1,3 @@
-#import (Config.path +'/Modules/Data/Bundle/Data/Collection/DataDataMainCollection') = DataDataMainCollection;
-
 class BaseUserDataMainCollection extends DataDataMainCollection {
 
 	_entityType = 'BaseUser';
@@ -16,5 +14,3 @@ class BaseUserDataMainCollection extends DataDataMainCollection {
 	}
 
 }
-
-#export BaseUserDataMainCollection;
