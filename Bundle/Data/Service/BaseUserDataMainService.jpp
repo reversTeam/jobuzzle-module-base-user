@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:09
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 16:41:05
 **************************************************************/
 
 class BaseUserDataMainService extends DataDataMainService {
@@ -16,6 +16,9 @@ class BaseUserDataMainService extends DataDataMainService {
 	_entityType = 'BaseUser';
 	_title = 'BaseUsers';
 
+	/**
+	* Change title page
+	**/
 	getTitleParamsView : function (entity) {
 		if (entity)
 			return { url : entity.getFirstname() +' '+ entity.getLastname() };

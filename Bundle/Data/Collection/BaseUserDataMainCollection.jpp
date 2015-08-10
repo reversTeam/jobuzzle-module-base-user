@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:09
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 16:39:12
 **************************************************************/
 
 class BaseUserDataMainCollection extends DataDataMainCollection {
@@ -15,6 +15,10 @@ class BaseUserDataMainCollection extends DataDataMainCollection {
 	_entityType = 'BaseUser';
 	_entityClass = 'baseuser_data_main_entity';
 
+
+	/**
+	* Get all protected attribute
+	**/
 	getProtected : function () {
 		if (this._protect == undefined) {
 			var parent = _super();
