@@ -1,8 +1,23 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:48
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 16:41:38
+**************************************************************/
+
 class BaseUserDataTemplateDeleteView extends DataDataTemplateDeleteView {
 
 	_class = 'baseuser';
 	_elementType = 'BaseUser';
 
+	/**
+	* display delete for base user
+	**/
 	display : function () {
 		return <div>Delete BaseUser</div>;
 	}

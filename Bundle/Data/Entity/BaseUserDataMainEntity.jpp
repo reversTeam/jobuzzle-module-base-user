@@ -1,3 +1,15 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:48
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 16:40:54
+**************************************************************/
+
 class BaseUserDataMainEntity extends DataDataMainEntity {
 
 	_type = 'BaseUser';
@@ -10,6 +22,11 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 	#default get, set for _picture;
 	#default get, set for _lang;
 
+
+	/**
+	* Initialize base user entity, add :
+	* firstname, lastname, username, lang
+	**/
 	initialize : function () {
 		_super();
 
@@ -19,6 +36,9 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 		this._lang = undefined;
 	}
 
+	/**
+	* Hydrate new attribute
+	**/
 	public hydrate : function (datas) {
 		_super(datas);
 
@@ -35,6 +55,9 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 		return this;
 	}
 
+	/**
+	* Search in firstname and lastname
+	**/
 	search : function (params) {
 		var reg = new RegExp(params, 'i');
 
@@ -47,6 +70,9 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 		);
 	}
 
+	/**
+	* Check if base user == current user
+	**/
 	isMe : function () {
 		return this.getId() == serviceLocator.get('ServiceManager').get('user_manager_main_service').getMeId();
 	}

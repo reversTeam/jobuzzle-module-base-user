@@ -1,9 +1,24 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:48
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 16:41:05
+**************************************************************/
+
 class BaseUserDataMainService extends DataDataMainService {
 
 	_type = 'baseuser';
 	_entityType = 'BaseUser';
 	_title = 'BaseUsers';
 
+	/**
+	* Change title page
+	**/
 	getTitleParamsView : function (entity) {
 		if (entity)
 			return { url : entity.getFirstname() +' '+ entity.getLastname() };
