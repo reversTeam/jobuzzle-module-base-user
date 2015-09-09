@@ -7,13 +7,16 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:09
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-12 14:43:50
 **************************************************************/
 
 class BaseUserDataTimelineTemplate extends DataDataTimelineTemplate {
 
 	_viewClassName = 'BaseUserDataTemplateTimelineView';
 
+	/**
+	* Centralize listen, call when object is ready for use
+	**/
 	onListen : function () {
 		var dispatcher = _super();
 
