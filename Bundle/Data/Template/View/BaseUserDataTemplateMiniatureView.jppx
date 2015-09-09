@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-12 14:42:44
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-09 16:10:41
 **************************************************************/
 
 class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
@@ -39,7 +39,7 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 
 		if (entity.getPicture() != undefined)
 			picture = entity.getPicture();
-		var style = { backgroundImage : "url('http://"+ picture +"')" };
+		var style = { backgroundImage : "url('"+ picture +"')" };
 
 		return (
 			<div className='user-display-miniature' style={style}>
