@@ -7,13 +7,13 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 16:46:33
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-12 14:42:44
 **************************************************************/
 
 class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 
 	/**
-	*
+	* Initialize base user, increment idELement
 	**/
 	initialize : function () {
 		_super();
@@ -21,7 +21,7 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 	}
 
 	/**
-	*
+	* Initialize parent state
 	**/
 	initialState : function () {
 		var state = _super();
