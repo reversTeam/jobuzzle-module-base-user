@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-12 14:43:50
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:44:56
 **************************************************************/
 
 class BaseUserDataTimelineTemplate extends DataDataTimelineTemplate {
@@ -17,7 +17,7 @@ class BaseUserDataTimelineTemplate extends DataDataTimelineTemplate {
 	/**
 	* Centralize listen, call when object is ready for use
 	**/
-	onListen : function () {
+	public onListen : function () {
 		var dispatcher = _super();
 
 		return dispatcher;

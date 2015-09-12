@@ -7,21 +7,14 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 16:40:54
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-12 20:02:19
 **************************************************************/
 
 class BaseUserDataMainEntity extends DataDataMainEntity {
 
-	_type = 'BaseUser';
-	_templateTimeline = 'baseuser_data_timeline_template';
-	_templateMiniature = 'baseuser_data_miniature_template';
-
-	#default get, set for _firstname;
-	#default get, set for _lastname;
-	#default get, set for _username;
-	#default get, set for _picture;
-	#default get, set for _lang;
-
+	public _type = 'BaseUser';
+	public _templateTimeline = 'baseuser_data_timeline_template';
+	public _templateMiniature = 'baseuser_data_miniature_template';
 
 	/**
 	* Initialize base user entity, add :
@@ -30,10 +23,11 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 	initialize : function () {
 		_super();
 
-		this._firstname = undefined;
-		this._lastname = undefined;
-		this._username = undefined;
-		this._lang = undefined;
+		this['_firstname'] = undefined;
+		this['_lastname'] = undefined;
+		this['_username'] = undefined;
+		this['_picture'] = undefined;
+		this['_lang'] = undefined;
 	}
 
 	/**
@@ -41,17 +35,16 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 	**/
 	public hydrate : function (datas) {
 		_super(datas);
-
-		if (datas.firstname)
-			this.setFirstname(datas.firstname);
-		if (datas.lastname)
-			this.setLastname(datas.lastname);
-		if (datas.username)
-			this.setUsername(datas.username);
-		if (datas.lang)
-			this.setLang(datas.lang);
-		if (datas.picture)
-			this.setPicture(datas.picture);
+		if (datas['firstname'])
+			this.setFirstname(datas['firstname']);
+		if (datas['lastname'])
+			this.setLastname(datas['lastname']);
+		if (datas['username'])
+			this.setUsername(datas['username']);
+		if (datas['lang'])
+			this.setLang(datas['lang']);
+		if (datas['picture'])
+			this.setPicture(datas['picture']);
 		return this;
 	}
 
@@ -75,5 +68,55 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 	**/
 	isMe : function () {
 		return this.getId() == serviceLocator.get('ServiceManager').get('user_manager_main_service').getMeId();
+	}
+
+	public getFirstname : function () {
+		return this['_firstname'];
+	}
+
+	public setFirstname : function (firstname) {
+		this['_firstname'] = firstname;
+
+		return this;
+	}
+
+	public getLastname : function () {
+		return this['_lastname'];
+	}
+
+	public setLastname : function (lastname) {
+		this['_lastname'] = lastname;
+
+		return this;
+	}
+
+	public getUsername : function () {
+		return this['_username'];
+	}
+
+	public setUsername : function (username) {
+		this['_username'] = username;
+
+		return this;
+	}
+
+	public getPicture : function () {
+		return this['_picture'];
+	}
+
+	public setPicture : function (picture) {
+		this['_picture'] = picture;
+
+		return this;
+	}
+
+	public getLang : function () {
+		return this['_lang'];
+	}
+
+	public setLang : function (lang) {
+		this['_lang'] = lang;
+
+		return this;
 	}
 }

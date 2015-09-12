@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 16:41:45
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:24:51
 **************************************************************/
 
 class BaseUserDataTemplateCreateView extends DataDataTemplateCreateView {
@@ -18,7 +18,7 @@ class BaseUserDataTemplateCreateView extends DataDataTemplateCreateView {
 	/**
 	* Display view for base user
 	**/
-	display : function () {
+	public display : function () {
 		return <div>Create BaseUser</div>;
 	}
 

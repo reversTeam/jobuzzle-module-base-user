@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 13:53:55
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:25:37
 **************************************************************/
 
 class BaseUserDataTemplateViewView extends DataDataTemplateViewView {
@@ -15,7 +15,7 @@ class BaseUserDataTemplateViewView extends DataDataTemplateViewView {
 	_class = 'baseuser';
 	_elementType = 'BaseUser';
 
-	display : function () {
+	public display : function () {
 		return <div>View BaseUser</div>;
 	}
 

@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-09 15:40:42
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:30:34
 **************************************************************/
 
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
@@ -17,7 +17,7 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		this._idElement = BaseUserDataTemplateTimelineView.elem_number++;
 	}
 
-	initialState : function () {
+	public initialState : function () {
 		var state = _super();
 
 		state.show = false;
@@ -34,7 +34,7 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		});
 	}
 
-	display : function () {
+	public display : function () {
 		var self = this;
 		var router = serviceLocator.get('Router');
 		var entity = this.state.entity;
