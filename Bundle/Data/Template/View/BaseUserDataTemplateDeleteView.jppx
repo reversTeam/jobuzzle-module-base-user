@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 16:41:38
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:25:03
 **************************************************************/
 
 class BaseUserDataTemplateDeleteView extends DataDataTemplateDeleteView {
@@ -18,7 +18,7 @@ class BaseUserDataTemplateDeleteView extends DataDataTemplateDeleteView {
 	/**
 	* display delete for base user
 	**/
-	display : function () {
+	public display : function () {
 		return <div>Delete BaseUser</div>;
 	}
 

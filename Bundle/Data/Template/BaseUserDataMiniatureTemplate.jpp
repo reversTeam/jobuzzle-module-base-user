@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-12 14:43:42
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:44:53
 **************************************************************/
 
 class BaseUserDataMiniatureTemplate extends DataDataMiniatureTemplate {
@@ -17,7 +17,7 @@ class BaseUserDataMiniatureTemplate extends DataDataMiniatureTemplate {
 	/**
 	* Centralize listen, call when object is ready for use
 	**/
-	onListen : function () {
+	public onListen : function () {
 		var dispatcher = _super();
 
 		return dispatcher;

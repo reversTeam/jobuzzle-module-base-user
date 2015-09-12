@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-09 16:10:41
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:30:31
 **************************************************************/
 
 class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
@@ -23,7 +23,7 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 	/**
 	* Initialize parent state
 	**/
-	initialState : function () {
+	public initialState : function () {
 		var state = _super();
 
 		return state;
@@ -32,7 +32,7 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 	/**
 	* Display miniature for baseuser
 	**/
-	display : function () {
+	public display : function () {
 		var self = this;
 		var entity = this.state.entity;
 		var picture = 'http://mobilephonetalk.com/customavatars/avatar211603_60.gif';
