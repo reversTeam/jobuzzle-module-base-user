@@ -1,0 +1,39 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-09-16 00:06:12
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 17:16:02
+**************************************************************/
+
+class BaseUserDataCreateForm extends DataDataCreateForm {
+
+	public _title = 'Create base user';
+	public _url = '/baseuser';
+
+	public _passwordDisplay = undefined;
+
+	public getElementsDisplay : function (element) {
+		var elementsDisplay = _super(element);
+
+		elementsDisplay['lang']['value'] = 'FR_fr';
+		elementsDisplay['password'] = this.getPasswordDisplay();
+
+		return elementsDisplay;
+	}
+
+	public getPasswordDisplay : function () {
+		if (this['_passwordDisplay'] == undefined) {
+			this['_passwordDisplay'] = {
+				type : 'Text',
+				label : 'Password'
+			}
+		}
+		return this['_passwordDisplay'];
+	}
+
+}
