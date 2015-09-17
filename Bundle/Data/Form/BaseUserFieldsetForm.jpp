@@ -1,0 +1,94 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-09-16 00:06:42
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 14:36:37
+**************************************************************/
+
+class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
+
+	public _formName = 'BaseUser';
+	public _createFormName = 'baseuser_data_create_form';
+	public _searchFormName = 'baseuser_data_search_form';
+	public _editFormName = 'baseuser_data_edit_form';
+	
+	public _firstnameDisplay = undefined;
+	public _lastnameDisplay = undefined;
+	public _usernameDisplay = undefined;
+	public _pictureDisplay = undefined;
+	public _langDisplay = undefined;
+
+	public getElementsDisplay : function () {
+		var elementsDisplay = _super();
+
+		elementsDisplay['firstname'] = this.getFirstnameDisplay();
+		elementsDisplay['lastname'] = this.getLastnameDisplay();
+		elementsDisplay['username'] = this.getUsernameDisplay();
+		elementsDisplay['picture'] = this.getPictureDisplay();
+		elementsDisplay['lang'] = this.getLangDisplay();
+
+		return elementsDisplay;
+	}
+
+	public getFirstnameDisplay : function () {
+		if (!this._firstnameDisplay) {
+			this._firstnameDisplay = {
+				type : 'Text',
+				label : 'Firstname',
+			};
+		}
+		return this._firstnameDisplay;
+	}
+
+	public getLastnameDisplay : function () {
+		if (!this._lastnameDisplay) {
+			this._lastnameDisplay = {
+				type : 'Text',
+				label : 'Lastname',
+			};
+		}
+		return this._lastnameDisplay;
+	}
+
+	public getUsernameDisplay : function () {
+		if (!this._usernameDisplay) {
+			this._usernameDisplay = {
+				type : 'Text',
+				label : 'Username',
+			};
+		}
+		return this._usernameDisplay;
+	}
+
+	public getPictureDisplay : function () {
+		if (!this._pictureDisplay) {
+			this._pictureDisplay = {
+				type : 'Text',
+				label : 'Picture',
+			};
+		}
+		return this._pictureDisplay;
+	}
+
+	public getLangDisplay : function () {
+		if (!this._langDisplay) {
+			this._langDisplay = {
+				type : 'Select',
+				label : 'Language',
+				options : {
+					values : {
+						'FR_fr' : 'French',
+						'EN_us' : 'English'
+					}
+				}
+			};
+		}
+		return this._langDisplay;
+	}
+
+}

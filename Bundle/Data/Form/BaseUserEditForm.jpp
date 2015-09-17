@@ -3,18 +3,17 @@
 *     ####         #                               #          *
 *       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
 *       ## #     # #     # #     #      #       #  # #     #  *
-*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:48
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-09-16 00:06:31
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 15:45:39
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 15:33:36
 **************************************************************/
 
-class BaseUserDataCreateTemplate extends DataDataCreateTemplate {
+class BaseUserDataEditForm extends DataDataEditForm {
 
-	_viewClassName = 'BaseUserDataTemplateCreateView';
-	_serviceName = 'baseuser_data_main_service';
-	_type = 'BaseUser';
-	_route = 'baseuser';
+	public _title = 'Edit base user';
+	public _url = '/baseuser/view/update';
+	public _paramNameRoute = 'baseuser_url';
 
 }

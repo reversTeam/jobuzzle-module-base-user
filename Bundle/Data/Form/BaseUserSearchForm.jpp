@@ -3,18 +3,16 @@
 *     ####         #                               #          *
 *       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
 *       ## #     # #     # #     #      #       #  # #     #  *
-*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:48
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-09-16 00:06:23
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 15:45:39
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 13:05:43
 **************************************************************/
 
-class BaseUserDataCreateTemplate extends DataDataCreateTemplate {
+class BaseUserDataSearchForm extends DataDataSearchForm {
 
-	_viewClassName = 'BaseUserDataTemplateCreateView';
-	_serviceName = 'baseuser_data_main_service';
-	_type = 'BaseUser';
-	_route = 'baseuser';
+	public _title = 'Search base user';
+	public _url = '/baseuser';
 
 }
