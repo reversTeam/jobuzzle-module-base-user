@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 14:36:37
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 18:46:26
 **************************************************************/
 
 class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
@@ -36,59 +36,52 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 	}
 
 	public getFirstnameDisplay : function () {
-		if (!this._firstnameDisplay) {
-			this._firstnameDisplay = {
-				type : 'Text',
-				label : 'Firstname',
-			};
+		if (!this['_firstnameDisplay']) {
+			this['_firstnameDisplay'] = {};
+			this['_firstnameDisplay']['type'] = 'Text';
+			this['_firstnameDisplay']['label'] = 'Firstname';
 		}
-		return this._firstnameDisplay;
+		return this['_firstnameDisplay'];
 	}
 
 	public getLastnameDisplay : function () {
-		if (!this._lastnameDisplay) {
-			this._lastnameDisplay = {
-				type : 'Text',
-				label : 'Lastname',
-			};
+		if (!this['_lastnameDisplay']) {
+			this['_lastnameDisplay'] = {};
+			this['_lastnameDisplay']['type'] = 'Text';
+			this['_lastnameDisplay']['label'] = 'Lastname';
 		}
-		return this._lastnameDisplay;
+		return this['_lastnameDisplay'];
 	}
 
 	public getUsernameDisplay : function () {
-		if (!this._usernameDisplay) {
-			this._usernameDisplay = {
-				type : 'Text',
-				label : 'Username',
-			};
+		if (!this['_usernameDisplay']) {
+			this['_usernameDisplay'] = {};
+			this['_usernameDisplay']['type'] = 'Text';
+			this['_usernameDisplay']['label'] = 'Username';
 		}
-		return this._usernameDisplay;
+		return this['_usernameDisplay'];
 	}
 
 	public getPictureDisplay : function () {
-		if (!this._pictureDisplay) {
-			this._pictureDisplay = {
-				type : 'Text',
-				label : 'Picture',
-			};
+		if (!this['_pictureDisplay']) {
+			this['_pictureDisplay'] = {};
+			this['_pictureDisplay']['type'] = 'Text';
+			this['_pictureDisplay']['label'] = 'Picture';
 		}
-		return this._pictureDisplay;
+		return this['_pictureDisplay'];
 	}
 
 	public getLangDisplay : function () {
-		if (!this._langDisplay) {
-			this._langDisplay = {
-				type : 'Select',
-				label : 'Language',
-				options : {
-					values : {
-						'FR_fr' : 'French',
-						'EN_us' : 'English'
-					}
-				}
-			};
+		if (!this['_langDisplay']) {
+			this['_langDisplay'] = {};
+			this['_langDisplay']['type'] = 'Select';
+			this['_langDisplay']['label'] = 'Language';
+			this['_langDisplay']['options'] = {};
+			this['_langDisplay']['options']['values'] = {};
+			this['_langDisplay']['options']['values']['FR_fr'] = 'French';
+			this['_langDisplay']['options']['values']['EN_us'] = 'English';
 		}
-		return this._langDisplay;
+		return this['_langDisplay'];
 	}
 
 }

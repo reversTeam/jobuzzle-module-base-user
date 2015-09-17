@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 17:16:02
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 18:36:54
 **************************************************************/
 
 class BaseUserDataCreateForm extends DataDataCreateForm {
@@ -29,8 +29,8 @@ class BaseUserDataCreateForm extends DataDataCreateForm {
 	public getPasswordDisplay : function () {
 		if (this['_passwordDisplay'] == undefined) {
 			this['_passwordDisplay'] = {
-				type : 'Text',
-				label : 'Password'
+				'type' : 'Text',
+				'label' : 'Password'
 			}
 		}
 		return this['_passwordDisplay'];
