@@ -7,16 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:25:34
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 13:00:18
 **************************************************************/
 
 class BaseUserDataTemplateUpdateView extends DataDataTemplateUpdateView {
 
 	_class = 'baseuser';
 	_elementType = 'BaseUser';
-
-	public display : function () {
-		return <div>Update BaseUser</div>;
-	}
 
 }
