@@ -7,12 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 18:36:54
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 12:21:47
 **************************************************************/
 
 class BaseUserDataCreateForm extends DataDataCreateForm {
 
-	public _title = 'Create base user';
+	public _title = 'form.title.baseuser.create';
 	public _url = '/baseuser';
 
 	public _passwordDisplay = undefined;
@@ -30,7 +30,7 @@ class BaseUserDataCreateForm extends DataDataCreateForm {
 		if (this['_passwordDisplay'] == undefined) {
 			this['_passwordDisplay'] = {
 				'type' : 'Text',
-				'label' : 'Password'
+				'label' : 'form.input.baseuser.password'
 			}
 		}
 		return this['_passwordDisplay'];

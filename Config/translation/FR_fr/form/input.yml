@@ -1,0 +1,19 @@
+###############################################################
+#     ####         #                               #          # Jobuzzle - Copyright All rights reserved
+#     ####         #                               #          #
+#       ##  #####  ######  #     # ####### ####### #  #####   # @Author: revers
+#       ## #     # #     # #     #      #       #  # #     #  #
+#       ## #     # #     # #     #     #       #   # #     #  # @Date:   2015-09-20 11:36:44
+#       ## #     # #     # #     #    #       #    # #     #  #
+#       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
+#  ####### #     # #     # #     #  #       #      # #        #
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-09-20 12:18:05
+###############################################################
+
+baseuser :
+	firstname : 'Prénom'
+	lastname : 'Nom'
+	username : "Nom d'utilisateur"
+	picture : 'Image'
+	language : 'Langue'
+	password : 'Mot de passe' 
