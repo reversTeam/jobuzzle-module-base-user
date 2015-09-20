@@ -7,12 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 15:33:36
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 12:21:56
 **************************************************************/
 
 class BaseUserDataEditForm extends DataDataEditForm {
 
-	public _title = 'Edit base user';
+	public _title = 'form.title.baseuser.edit';
 	public _url = '/baseuser/view/update';
 	public _paramNameRoute = 'baseuser_url';
 

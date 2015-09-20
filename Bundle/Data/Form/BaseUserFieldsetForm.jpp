@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 18:46:26
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 11:41:18
 **************************************************************/
 
 class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
@@ -39,7 +39,7 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 		if (!this['_firstnameDisplay']) {
 			this['_firstnameDisplay'] = {};
 			this['_firstnameDisplay']['type'] = 'Text';
-			this['_firstnameDisplay']['label'] = 'Firstname';
+			this['_firstnameDisplay']['label'] = 'form.input.baseuser.firstname';
 		}
 		return this['_firstnameDisplay'];
 	}
@@ -48,7 +48,7 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 		if (!this['_lastnameDisplay']) {
 			this['_lastnameDisplay'] = {};
 			this['_lastnameDisplay']['type'] = 'Text';
-			this['_lastnameDisplay']['label'] = 'Lastname';
+			this['_lastnameDisplay']['label'] = 'form.input.baseuser.lastname';
 		}
 		return this['_lastnameDisplay'];
 	}
@@ -57,7 +57,7 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 		if (!this['_usernameDisplay']) {
 			this['_usernameDisplay'] = {};
 			this['_usernameDisplay']['type'] = 'Text';
-			this['_usernameDisplay']['label'] = 'Username';
+			this['_usernameDisplay']['label'] = 'form.input.baseuser.username';
 		}
 		return this['_usernameDisplay'];
 	}
@@ -66,7 +66,7 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 		if (!this['_pictureDisplay']) {
 			this['_pictureDisplay'] = {};
 			this['_pictureDisplay']['type'] = 'Text';
-			this['_pictureDisplay']['label'] = 'Picture';
+			this['_pictureDisplay']['label'] = 'form.input.baseuser.picture';
 		}
 		return this['_pictureDisplay'];
 	}
@@ -75,11 +75,11 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 		if (!this['_langDisplay']) {
 			this['_langDisplay'] = {};
 			this['_langDisplay']['type'] = 'Select';
-			this['_langDisplay']['label'] = 'Language';
+			this['_langDisplay']['label'] = 'form.input.baseuser.language';
 			this['_langDisplay']['options'] = {};
 			this['_langDisplay']['options']['values'] = {};
-			this['_langDisplay']['options']['values']['FR_fr'] = 'French';
-			this['_langDisplay']['options']['values']['EN_us'] = 'English';
+			this['_langDisplay']['options']['values']['FR_fr'] = 'form.select.baseuser.language.french';
+			this['_langDisplay']['options']['values']['EN_us'] = 'form.select.baseuser.language.english';
 		}
 		return this['_langDisplay'];
 	}
