@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-15 13:13:09
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-21 23:21:13
 **************************************************************/
 
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
@@ -27,22 +27,22 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 
 	getUrl : function () {
 		var router = serviceLocator.get('Router');
-		var entity = this.state.entity;
+		var entity = this.state['entity'];
 
 		return router.build('/student/view',{
-			student_url : entity.getUrl()
+			'student_url' : entity['getUrl']()
 		});
 	}
 
 	public display : function () {
 		var self = this;
 		var router = serviceLocator.get('Router');
-		var entity = this.state.entity;
+		var entity = this.state['entity'];
 		var picture = 'http://vignette1.wikia.nocookie.net/simpsons/images/1/1a/Bart-simpson-11.gif/revision/latest?cb=20111228173813&path-prefix=pt';
 
-		if (entity.getPicture() != undefined)
-			picture = entity.getPicture();
-		var style = { 'backgroundImage' : "url('"+ picture +"')" };
+		if (entity['getPicture']() != undefined)
+			picture = entity['getPicture']();
+		var style = { backgroundImage : "url('"+ picture +"')" };
 
 		return (
 			<div className="user-display-timeline show" style={style} data-url={this.getUrl()} onClick={this.link}>

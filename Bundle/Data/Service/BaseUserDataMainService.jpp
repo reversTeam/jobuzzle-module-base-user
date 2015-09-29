@@ -7,15 +7,15 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-16 00:05:44
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 19:16:29
 **************************************************************/
 
 class BaseUserDataMainService extends DataDataMainService {
 
-	_type = 'baseuser';
-	_entityType = 'BaseUser';
-	_title = 'BaseUsers';
-	_fieldsetName = 'baseuser_data_fieldset_form';
+	public _type = 'baseuser';
+	public _entityType = 'BaseUser';
+	public _title = 'BaseUsers';
+	public _fieldsetName = 'baseuser_data_fieldset_form';
 
 	/**
 	* Change title page

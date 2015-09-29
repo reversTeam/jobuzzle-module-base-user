@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-12 20:02:19
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 16:44:06
 **************************************************************/
 
 class BaseUserDataMainEntity extends DataDataMainEntity {
@@ -66,8 +66,8 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 	/**
 	* Check if base user == current user
 	**/
-	isMe : function () {
-		return this.getId() == serviceLocator.get('ServiceManager').get('user_manager_main_service').getMeId();
+	public isMe : function () {
+		return this['getId']() == serviceLocator.get('ServiceManager').get('user_manager_main_service').getMeId();
 	}
 
 	public getFirstname : function () {

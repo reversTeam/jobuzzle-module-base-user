@@ -7,13 +7,13 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 16:39:12
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 19:16:46
 **************************************************************/
 
 class BaseUserDataMainCollection extends DataDataMainCollection {
 
-	_entityType = 'BaseUser';
-	_entityClass = 'baseuser_data_main_entity';
+	public _entityType = 'BaseUser';
+	public _entityClass = 'baseuser_data_main_entity';
 
 
 	/**
