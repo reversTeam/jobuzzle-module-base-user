@@ -7,13 +7,13 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:30:09
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 19:16:38
 **************************************************************/
 
 class BaseUserDataMainController extends DataDataMainController {
 
-	_serviceName = 'baseuser_data_main_service';
-	_entityName = 'BaseUser';
-	_url = 'baseuser';
+	public _serviceName = 'baseuser_data_main_service';
+	public _entityName = 'BaseUser';
+	public _url = 'baseuser';
 
 }
