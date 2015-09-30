@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-21 23:21:13
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-30 22:38:57
 **************************************************************/
 
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
@@ -29,6 +29,9 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		var router = serviceLocator.get('Router');
 		var entity = this.state['entity'];
 
+		if (!entity || entity['getUrl']() == undefined)
+			return null;
+
 		return router.build('/student/view',{
 			'student_url' : entity['getUrl']()
 		});
@@ -38,7 +41,7 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		var self = this;
 		var router = serviceLocator.get('Router');
 		var entity = this.state['entity'];
-		var picture = 'http://vignette1.wikia.nocookie.net/simpsons/images/1/1a/Bart-simpson-11.gif/revision/latest?cb=20111228173813&path-prefix=pt';
+		var picture = '';
 
 		if (entity['getPicture']() != undefined)
 			picture = entity['getPicture']();
@@ -47,7 +50,10 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		return (
 			<div className="user-display-timeline show" style={style} data-url={this.getUrl()} onClick={this.link}>
 				<div className="user-bottom-info">
-					<span className="username">{entity.getFirstname() +' '+ entity.getLastname()}</span>
+					{ entity.getFirstname() || entity.getLastname()
+						? <span className="username">{entity.getFirstname() +' '+ entity.getLastname()}</span>
+						: <span className="username"></span>
+					}
 				</div>
 			</div>
 		);
