@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-21 23:09:55
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-02 14:34:52
 **************************************************************/
 
 class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
@@ -18,15 +18,6 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 	initialize : function () {
 		_super();
 		this._idElement = BaseUserDataTemplateMiniatureView.elem_number++;
-	}
-
-	/**
-	* Initialize parent state
-	**/
-	public initialState : function () {
-		var state = _super();
-
-		return state;
 	}
 
 	/**
