@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-03 02:17:04
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-04 02:12:18
 **************************************************************/
 
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
@@ -29,11 +29,16 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		var self = this;
 		var router = serviceLocator.get('Router');
 		var entity = this.state['entity'];
+		var searchTemplate = this.getSearchTemplate();
 		var picture = '';
 
 		if (entity['getPicture']() != undefined)
 			picture = entity['getPicture']();
-		var style = { backgroundImage : "url('"+ picture +"')" };
+		var style = { 
+			backgroundImage : "url('"+ picture +"')",
+			width : searchTemplate.getEntityWidth(),
+			height : searchTemplate.getEntityHeight()
+		};
 
 		return (
 			<div className="user-display-timeline show" style={style} data-url={this.getUrl()} onClick={this.link}>
