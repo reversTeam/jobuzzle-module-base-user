@@ -7,12 +7,13 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:44:56
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-04 01:02:43
 **************************************************************/
 
 class BaseUserDataTimelineTemplate extends DataDataTimelineTemplate {
 
-	_viewClassName = 'BaseUserDataTemplateTimelineView';
+	public _viewClassName = 'BaseUserDataTemplateTimelineView';
+	public _type = 'BaseUser';
 
 	/**
 	* Centralize listen, call when object is ready for use
