@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-05 22:52:44
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 15:51:40
 **************************************************************/
 
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
@@ -33,7 +33,7 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		var picture = '';
 
 		if (entity['getPicture']() != undefined)
-			picture = entity['getPicture']();
+			picture = this.getUrlAsset(entity['getPicture']());
 		var style = { 
 			backgroundImage : "url('"+ picture +"')"
 		};
