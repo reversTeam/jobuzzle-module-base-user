@@ -7,18 +7,10 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 15:40:46
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 02:06:24
 **************************************************************/
 
 class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
-
-	/**
-	* Initialize base user, increment idELement
-	**/
-	initialize : function () {
-		_super();
-		this._idElement = BaseUserDataTemplateMiniatureView.elem_number++;
-	}
 
 	/**
 	* Display miniature for baseuser
