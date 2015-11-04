@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-10 02:06:24
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-03 16:05:09
 **************************************************************/
 
 class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
@@ -18,7 +18,7 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 	public display : function () {
 		var self = this;
 		var entity = this.state['entity'];
-		var picture = 'http://mobilephonetalk.com/customavatars/avatar211603_60.gif';
+		var picture = '';
 
 		if (entity.getPicture() != undefined)
 			picture = this.getUrlAsset(entity.getPicture());
