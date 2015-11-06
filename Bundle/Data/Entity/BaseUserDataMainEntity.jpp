@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 16:44:06
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-06 12:22:31
 **************************************************************/
 
 class BaseUserDataMainEntity extends DataDataMainEntity {
@@ -28,6 +28,7 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 		this['_username'] = undefined;
 		this['_picture'] = undefined;
 		this['_lang'] = undefined;
+		this['_name'] = undefined;
 	}
 
 	/**
@@ -118,5 +119,9 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 		this['_lang'] = lang;
 
 		return this;
+	}
+
+	public getName : function () {
+		return this.getFirstname() +' '+ this.getLastname();
 	}
 }

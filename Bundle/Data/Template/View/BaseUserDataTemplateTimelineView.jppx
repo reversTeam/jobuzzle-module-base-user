@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-06 08:36:35
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-06 11:45:08
 **************************************************************/
 
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
@@ -22,6 +22,10 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 
 
 		return state;
+	}
+
+	public displayFooter : function () {
+		return null;
 	}
 
 	public display : function () {
@@ -46,6 +50,7 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 						: <span className="username"></span>
 					}
 				</div>
+				{this.displayFooter()}
 			</div>
 		);
 	}
