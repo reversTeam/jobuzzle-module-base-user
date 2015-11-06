@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 15:51:40
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-06 08:36:35
 **************************************************************/
 
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
@@ -20,7 +20,6 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 	public initialState : function () {
 		var state = _super();
 
-		state.show = false;
 
 		return state;
 	}
@@ -39,7 +38,8 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		};
 
 		return (
-			<div className="user-display-timeline show" style={style} data-url={this.getUrl()} onClick={this.link}>
+			<div className="baseuser timeline" data-url={this.getUrl()} onClick={this.link}>
+				<div className="avatar" style={style}></div>
 				<div className="user-bottom-info">
 					{ entity.getFirstname() || entity.getLastname()
 						? <span className="username">{entity.getFirstname() +' '+ entity.getLastname()}</span>
