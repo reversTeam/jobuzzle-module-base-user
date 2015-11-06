@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-03 16:05:09
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-06 15:30:00
 **************************************************************/
 
 class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
@@ -25,7 +25,7 @@ class BaseUserDataTemplateMiniatureView extends DataDataTemplateMiniatureView {
 		var style = { backgroundImage : "url('"+ picture +"')" };
 
 		return (
-			<div className='user-display-miniature' style={style}>
+			<div className='baseuser miniature' style={style}>
 			</div>
 		);
 	}
