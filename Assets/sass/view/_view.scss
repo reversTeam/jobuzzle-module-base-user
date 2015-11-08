@@ -1,0 +1,69 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-11-08 02:21:44
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:40:03
+**************************************************************/
+
+div.baseuser.view {
+
+	div.picture {
+		display: block;
+		width: 160px;
+		height: 160px;
+		background-size : cover;
+		background-repeat: no-repeat;
+		background-color : rgba($primary_color, 0.8);
+		border: 2px solid $secondary_color;
+		border-radius: 50%;
+		margin: 20px auto;
+	}
+
+	div.explain {
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		width: 100%;
+		padding-bottom: 20px;
+
+		div.name {
+			display: block;
+			vertical-align: top;
+			color: $primary_color;
+			font-size: 64px;
+			font-weight: 200;
+		}
+
+		p.description {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			color : darken($white_color, 35);
+			width: 800px;
+		}
+	}
+
+	p.description {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		color : darken($white_color, 35);
+		width: 800px;
+	}
+
+	div.nameProfile {
+		display: inline-block;
+		vertical-align: top;
+		margin-left : 20px;
+		color: $primary_color;
+		font-size: 26px;
+		font-weight: bold;
+	}
+}
