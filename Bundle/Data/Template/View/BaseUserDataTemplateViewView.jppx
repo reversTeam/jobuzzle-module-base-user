@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:25:37
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:40:41
 **************************************************************/
 
 class BaseUserDataTemplateViewView extends DataDataTemplateViewView {
@@ -16,7 +16,32 @@ class BaseUserDataTemplateViewView extends DataDataTemplateViewView {
 	_elementType = 'BaseUser';
 
 	public display : function () {
-		return <div>View BaseUser</div>;
+		var router = serviceLocator.get('Router');
+		var entity = this.state['entity'];
+		var picture = '';
+		var style = {};
+
+		if (!entity)
+			return (<div>Student not loaded</div>);
+		else if (entity.getPicture() != undefined)
+			picture = this.getUrlAsset(entity.getPicture());
+		style['backgroundImage'] = 'url("'+ picture +'")'; 
+		return <div className={['baseuser', 'view', this.getClass()].join(' ')}>
+			<div className="container">
+				<div className="picture" style={style}></div>
+				<div className="explain">
+					<div className="name">
+						{entity.getName()}
+					</div>
+					<p className="description">{entity.getDescription()}</p>
+				</div>
+				{this.displayContents()}
+			</div>
+		</div>;
+	}
+
+	public displayContents : function () {
+		return <div className="contents"></div>;
 	}
 
 }

@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-06 11:45:08
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 01:49:10
 **************************************************************/
 
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
@@ -25,7 +25,10 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 	}
 
 	public displayFooter : function () {
-		return null;
+		var t = serviceLocator.get('Translator');
+		return <div className="footer">
+			{t.translate('baseuser.timeline.baseuser')}
+		</div>;
 	}
 
 	public display : function () {

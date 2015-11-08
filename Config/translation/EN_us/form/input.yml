@@ -7,7 +7,7 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-09-20 12:17:45
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-08 02:31:29
 ###############################################################
 
 baseuser :
@@ -17,3 +17,4 @@ baseuser :
 	picture : 'Picture'
 	language : 'Language'
 	password : 'Password'
+	description: Description

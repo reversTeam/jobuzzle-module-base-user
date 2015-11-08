@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-06 12:22:31
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:39:09
 **************************************************************/
 
 class BaseUserDataMainEntity extends DataDataMainEntity {
@@ -27,6 +27,7 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 		this['_lastname'] = undefined;
 		this['_username'] = undefined;
 		this['_picture'] = undefined;
+		this['_description'] = undefined;
 		this['_lang'] = undefined;
 		this['_name'] = undefined;
 	}
@@ -36,16 +37,18 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 	**/
 	public hydrate : function (datas) {
 		_super(datas);
-		if (datas['firstname'])
+		if (datas['firstname'] != undefined)
 			this.setFirstname(datas['firstname']);
-		if (datas['lastname'])
+		if (datas['lastname'] != undefined)
 			this.setLastname(datas['lastname']);
-		if (datas['username'])
+		if (datas['username'] != undefined)
 			this.setUsername(datas['username']);
-		if (datas['lang'])
+		if (datas['lang'] != undefined)
 			this.setLang(datas['lang']);
-		if (datas['picture'])
+		if (datas['picture'] != undefined)
 			this.setPicture(datas['picture']);
+		if (datas['description'] != undefined)
+			this.setDescription(datas['description']);
 		return this;
 	}
 
@@ -107,6 +110,16 @@ class BaseUserDataMainEntity extends DataDataMainEntity {
 
 	public setPicture : function (picture) {
 		this['_picture'] = picture;
+
+		return this;
+	}
+
+	public getDescription : function () {
+		return this['_description'];
+	}
+
+	public setDescription : function (description) {
+		this['_description'] = description;
 
 		return this;
 	}

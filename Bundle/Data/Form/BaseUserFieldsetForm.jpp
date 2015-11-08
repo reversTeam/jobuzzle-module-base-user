@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 11:41:18
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:31:53
 **************************************************************/
 
 class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
@@ -21,6 +21,7 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 	public _lastnameDisplay = undefined;
 	public _usernameDisplay = undefined;
 	public _pictureDisplay = undefined;
+	public _descriptionDisplay = undefined;
 	public _langDisplay = undefined;
 
 	public getElementsDisplay : function () {
@@ -30,6 +31,7 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 		elementsDisplay['lastname'] = this.getLastnameDisplay();
 		elementsDisplay['username'] = this.getUsernameDisplay();
 		elementsDisplay['picture'] = this.getPictureDisplay();
+		elementsDisplay['description'] = this.getDescriptionDisplay();
 		elementsDisplay['lang'] = this.getLangDisplay();
 
 		return elementsDisplay;
@@ -69,6 +71,15 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 			this['_pictureDisplay']['label'] = 'form.input.baseuser.picture';
 		}
 		return this['_pictureDisplay'];
+	}
+
+	public getDescriptionDisplay : function () {
+		if (!this['_descriptionDisplay']) {
+			this['_descriptionDisplay'] = {};
+			this['_descriptionDisplay']['type'] = 'Text';
+			this['_descriptionDisplay']['label'] = 'form.input.baseuser.description';
+		}
+		return this['_descriptionDisplay'];
 	}
 
 	public getLangDisplay : function () {
