@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:21:29
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-10 02:28:59
 **************************************************************/
 
 div.baseuser.timeline {
@@ -19,18 +19,14 @@ div.baseuser.timeline {
 	cursor: pointer;
 	@include backgroundApp;
 
-	div.avatar {
+	div.baseuser.miniature {
 		width : 100px;
 		height: 100px;
-		border-radius: 50%;
 		margin-left: auto;
 		margin-right: auto;
-		background-size: cover;
-		background-color : rgba($primary_color, 0.8);
-		box-sizing: border-box;
-		-moz-box-sizing: border-box;
+		display: block;
 		border: 2px solid $secondary_color;
-		@include animation('fadeIn 1s linear both');
+		@include animation('fadeIn 1s ease-in-out both');
 		opacity: 0;
 	}
 

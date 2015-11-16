@@ -7,11 +7,17 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-08 01:49:43
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-09 14:09:39
 ###############################################################
 
-BaseUsers : Users
-view: '{{url}}'
+page:
+	title:
+		BaseUsers : Users
+		view: '{{url}}'
 
 timeline:
 	baseuser: User
+
+view:
+	actions:
+		edit: Edit user

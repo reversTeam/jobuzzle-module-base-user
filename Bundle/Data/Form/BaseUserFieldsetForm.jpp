@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:31:53
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 22:47:20
 **************************************************************/
 
 class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
@@ -27,8 +27,8 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 	public getElementsDisplay : function () {
 		var elementsDisplay = _super();
 
-		elementsDisplay['firstname'] = this.getFirstnameDisplay();
 		elementsDisplay['lastname'] = this.getLastnameDisplay();
+		elementsDisplay['firstname'] = this.getFirstnameDisplay();
 		elementsDisplay['username'] = this.getUsernameDisplay();
 		elementsDisplay['picture'] = this.getPictureDisplay();
 		elementsDisplay['description'] = this.getDescriptionDisplay();
@@ -76,7 +76,7 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 	public getDescriptionDisplay : function () {
 		if (!this['_descriptionDisplay']) {
 			this['_descriptionDisplay'] = {};
-			this['_descriptionDisplay']['type'] = 'Text';
+			this['_descriptionDisplay']['type'] = 'Textarea';
 			this['_descriptionDisplay']['label'] = 'form.input.baseuser.description';
 		}
 		return this['_descriptionDisplay'];

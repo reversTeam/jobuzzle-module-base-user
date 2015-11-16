@@ -7,20 +7,16 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:40:03
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-10 01:54:44
 **************************************************************/
 
 div.baseuser.view {
 
-	div.picture {
+	div.baseuser.miniature {
 		display: block;
 		width: 160px;
 		height: 160px;
-		background-size : cover;
-		background-repeat: no-repeat;
-		background-color : rgba($primary_color, 0.8);
 		border: 2px solid $secondary_color;
-		border-radius: 50%;
 		margin: 20px auto;
 	}
 
@@ -45,7 +41,7 @@ div.baseuser.view {
 			margin-right: auto;
 			text-align: center;
 			color : darken($white_color, 35);
-			width: 800px;
+			width: 80%;
 		}
 	}
 
