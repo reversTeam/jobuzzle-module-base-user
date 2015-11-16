@@ -7,12 +7,14 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:44:53
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-09 13:25:20
 **************************************************************/
 
 class BaseUserDataMiniatureTemplate extends DataDataMiniatureTemplate {
 
 	_viewClassName = 'BaseUserDataTemplateMiniatureView';
+
+	public _type = 'BaseUser';
 
 	/**
 	* Centralize listen, call when object is ready for use

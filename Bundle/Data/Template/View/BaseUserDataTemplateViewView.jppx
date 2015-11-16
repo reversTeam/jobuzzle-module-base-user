@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:40:41
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-10 01:54:15
 **************************************************************/
 
 class BaseUserDataTemplateViewView extends DataDataTemplateViewView {
@@ -28,7 +28,8 @@ class BaseUserDataTemplateViewView extends DataDataTemplateViewView {
 		style['backgroundImage'] = 'url("'+ picture +'")'; 
 		return <div className={['baseuser', 'view', this.getClass()].join(' ')}>
 			<div className="container">
-				<div className="picture" style={style}></div>
+				{this.displayActions(entity)}
+				{entity.displayMiniature()}
 				<div className="explain">
 					<div className="name">
 						{entity.getName()}

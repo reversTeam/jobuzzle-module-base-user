@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 01:49:10
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-10 01:51:57
 **************************************************************/
 
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
@@ -36,17 +36,10 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		var router = serviceLocator.get('Router');
 		var entity = this.state['entity'];
 		var searchTemplate = this.getSearchTemplate();
-		var picture = '';
-
-		if (entity['getPicture']() != undefined)
-			picture = this.getUrlAsset(entity['getPicture']());
-		var style = { 
-			backgroundImage : "url('"+ picture +"')"
-		};
 
 		return (
 			<div className="baseuser timeline" data-url={this.getUrl()} onClick={this.link}>
-				<div className="avatar" style={style}></div>
+				{entity.displayMiniature()}
 				<div className="user-bottom-info">
 					{ entity.getFirstname() || entity.getLastname()
 						? <span className="username">{entity.getFirstname() +' '+ entity.getLastname()}</span>
