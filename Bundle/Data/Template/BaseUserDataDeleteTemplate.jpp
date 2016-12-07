@@ -7,13 +7,13 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 21:59:55
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-21 15:29:42
 **************************************************************/
 
 class BaseUserDataDeleteTemplate extends DataDataDeleteTemplate {
 
-	_viewClassName = 'BaseUserDataTemplateDeleteView';
-	_type = 'BaseUser';
-	_route = 'baseuser';
+	public _viewClassName = 'BaseUserDataTemplateDeleteView';
+	public _type = 'BaseUser';
+	public _serviceName = 'baseuser_data_main_service';
 
 }

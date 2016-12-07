@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 22:47:20
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-12-02 12:53:12
 **************************************************************/
 
 class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
@@ -18,23 +18,47 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 	public _editFormName = 'baseuser_data_edit_form';
 	
 	public _firstnameDisplay = undefined;
+	public _firstnameInput = undefined;
+
 	public _lastnameDisplay = undefined;
+	public _lastnameInput = undefined;
+
 	public _usernameDisplay = undefined;
+	public _usernameInput = undefined;
+
 	public _pictureDisplay = undefined;
+	public _pictureInput = undefined;
+
 	public _descriptionDisplay = undefined;
+	public _descriptionInput = undefined;
+
 	public _langDisplay = undefined;
+	public _langInput = undefined;
 
 	public getElementsDisplay : function () {
 		var elementsDisplay = _super();
 
 		elementsDisplay['lastname'] = this.getLastnameDisplay();
 		elementsDisplay['firstname'] = this.getFirstnameDisplay();
-		elementsDisplay['username'] = this.getUsernameDisplay();
+		// elementsDisplay['username'] = this.getUsernameDisplay();
 		elementsDisplay['picture'] = this.getPictureDisplay();
 		elementsDisplay['description'] = this.getDescriptionDisplay();
 		elementsDisplay['lang'] = this.getLangDisplay();
 
 		return elementsDisplay;
+	}
+
+	public getElementsInput : function () {
+		var elementsInput = _super();
+
+		elementsInput['firstname'] = this.getFirstnameInput();
+		elementsInput['lastname'] = this.getLastnameInput();
+		elementsInput['username'] = this.getUsernameInput();
+		elementsInput['picture'] = this.getPictureInput();
+		elementsInput['description'] = this.getDescriptionInput();
+		elementsInput['lang'] = this.getLangInput();
+
+		return elementsInput;
 	}
 
 	public getFirstnameDisplay : function () {
@@ -93,6 +117,108 @@ class BaseUserDataFieldsetForm extends DataDataFieldsetForm {
 			this['_langDisplay']['options']['values']['EN_us'] = 'form.select.baseuser.language.english';
 		}
 		return this['_langDisplay'];
+	}
+
+	public getFirstnameInput : function () {
+		if (!this['_firstnameInput']) {
+			this['_firstnameInput'] = {};
+
+			this['_firstnameInput']['required'] = true;
+
+			this['_firstnameInput']['filters'] = [];
+			this['_firstnameInput']['filters'][0] = {}
+			this['_firstnameInput']['filters'][0]['name'] = 'Trim';
+
+			this['_firstnameInput']['validators'] = [];
+			this['_firstnameInput']['validators'][0] = {};
+			this['_firstnameInput']['validators'][0]['name'] = 'Text';
+
+		}
+		return this['_firstnameInput'];
+	}
+
+	public getLastnameInput : function () {
+		if (!this['_lastnameInput']) {
+			this['_lastnameInput'] = {};
+
+			this['_lastnameInput']['required'] = true;
+
+			this['_lastnameInput']['filters'] = [];
+			this['_lastnameInput']['filters'][0] = {}
+			this['_lastnameInput']['filters'][0]['name'] = 'Trim';
+
+			this['_lastnameInput']['validators'] = [];
+			this['_lastnameInput']['validators'][0] = {};
+			this['_lastnameInput']['validators'][0]['name'] = 'Text';
+		}
+		return this['_lastnameInput'];
+	}
+
+	public getUsernameInput : function () {
+		if (!this['_usernameInput']) {
+			this['_usernameInput'] = {};
+
+			this['_usernameInput']['required'] = true;
+
+			this['_usernameInput']['filters'] = [];
+			this['_usernameInput']['filters'][0] = {}
+			this['_usernameInput']['filters'][0]['name'] = 'Trim';
+
+			this['_usernameInput']['validators'] = [];
+			this['_usernameInput']['validators'][0] = {};
+			this['_usernameInput']['validators'][0]['name'] = 'Text';
+		}
+		return this['_usernameInput'];
+	}
+
+	public getPictureInput : function () {
+		if (!this['_pictureInput']) {
+			this['_pictureInput'] = {};
+
+			this['_pictureInput']['required'] = true;
+
+			this['_pictureInput']['filters'] = [];
+			this['_pictureInput']['filters'][0] = {}
+			this['_pictureInput']['filters'][0]['name'] = 'Trim';
+		}
+		return this['_pictureInput'];
+	}
+
+	public getDescriptionInput : function () {
+		if (!this['_descriptionInput']) {
+			this['_descriptionInput'] = {};
+
+			this['_descriptionInput']['required'] = true;
+
+			this['_descriptionInput']['filters'] = [];
+			this['_descriptionInput']['filters'][0] = {}
+			this['_descriptionInput']['filters'][0]['name'] = 'Trim';
+
+			this['_descriptionInput']['validators'] = [];
+			this['_descriptionInput']['validators'][0] = {};
+			this['_descriptionInput']['validators'][0]['name'] = 'Text';
+		}
+		return this['_descriptionInput'];
+	}
+
+	public getLangInput : function () {
+		if (!this['_langInput']) {
+			this['_langInput'] = {};
+
+			this['_langInput']['required'] = true;
+
+			this['_langInput']['filters'] = [];
+			this['_langInput']['filters'][0] = {}
+			this['_langInput']['filters'][0]['name'] = 'Trim';
+
+			this['_langInput']['validators'] = [];
+			this['_langInput']['validators'][0] = {};
+			this['_langInput']['validators'][0]['name'] = 'InArray';
+			this['_langInput']['validators'][0]['options'] = {};
+			this['_langInput']['validators'][0]['options']['haystack'] = ['FR_fr', 'En_us'];
+
+		}
+		return this['_langInput'];
 	}
 
 }

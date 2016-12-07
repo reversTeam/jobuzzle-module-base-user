@@ -7,7 +7,7 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-09 14:09:49
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-21 14:58:56
 ###############################################################
 
 page:
@@ -21,3 +21,4 @@ timeline:
 view:
 	actions:
 		edit: Editer l'utilisateur
+		delete: Supprimmer l'utilisateur

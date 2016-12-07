@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 12:21:47
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-27 16:44:40
 **************************************************************/
 
 class BaseUserDataCreateForm extends DataDataCreateForm {
@@ -16,24 +16,44 @@ class BaseUserDataCreateForm extends DataDataCreateForm {
 	public _url = '/baseuser';
 
 	public _passwordDisplay = undefined;
+	public _passwordInput = undefined;
 
 	public getElementsDisplay : function (element) {
 		var elementsDisplay = _super(element);
 
-		elementsDisplay['lang']['value'] = 'FR_fr';
 		elementsDisplay['password'] = this.getPasswordDisplay();
 
 		return elementsDisplay;
 	}
 
+	public getElementsInput : function (element) {
+		var elementsInput = _super(element);
+
+		elementsInput['password'] = this.getPasswordInput();
+
+		return elementsInput;
+	}
+
 	public getPasswordDisplay : function () {
 		if (this['_passwordDisplay'] == undefined) {
-			this['_passwordDisplay'] = {
-				'type' : 'Text',
-				'label' : 'form.input.baseuser.password'
-			}
+			this['_passwordDisplay'] = {};
+			this['_passwordDisplay']['type'] = 'Text';
+			this['_passwordDisplay']['label'] = 'form.input.baseuser.password';
 		}
 		return this['_passwordDisplay'];
+	}
+
+	public getPasswordInput : function () {
+		if (!this['_passwordInput']) {
+			this['_passwordInput'] = {};
+
+			this['_passwordInput']['required'] = true;
+
+			this['_passwordInput']['validators'] = [];
+			this['_passwordInput']['validators'][0] = {};
+			this['_passwordInput']['validators'][0]['name'] = 'Text';
+		}
+		return this['_passwordInput'];
 	}
 
 }

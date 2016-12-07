@@ -7,10 +7,11 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-09-20 12:23:45
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-21 14:59:10
 ###############################################################
 
 baseuser:
 	create : 'Créer un utilisateur'
 	edit : 'Editer un utilisateur'
 	search : 'Rechercher des utilisateurs'
+	delete: Supprimer l'utilisateur

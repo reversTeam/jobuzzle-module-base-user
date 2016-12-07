@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-10 01:51:57
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-21 13:06:39
 **************************************************************/
 
 class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
@@ -15,6 +15,12 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 	initialize : function (props, context) {
 		_super(props, context);
 		this._idElement = BaseUserDataTemplateTimelineView.elem_number++;
+	}
+
+	public getClassElement : function () {
+		var classElement = _super();
+		classElement.push('baseuser');
+		return classElement;
 	}
 
 	public initialState : function () {
@@ -31,14 +37,14 @@ class BaseUserDataTemplateTimelineView extends DataDataTemplateTimelineView {
 		</div>;
 	}
 
-	public display : function () {
+	public displayContent : function () {
 		var self = this;
 		var router = serviceLocator.get('Router');
 		var entity = this.state['entity'];
 		var searchTemplate = this.getSearchTemplate();
 
 		return (
-			<div className="baseuser timeline" data-url={this.getUrl()} onClick={this.link}>
+			<div data-url={this.getUrl()} onClick={this.link}>
 				{entity.displayMiniature()}
 				<div className="user-bottom-info">
 					{ entity.getFirstname() || entity.getLastname()
